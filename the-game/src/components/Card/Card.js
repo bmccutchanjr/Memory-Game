@@ -2,15 +2,15 @@ import React, { Component } from "react";
 import "./Card.css";
 
 class Card extends Component
-{   constructor (props)
-    {   super (props);
-        this.state =
+{
+        state =
         {   isSeleted: false
         }
-    }
+    
 
-    handleClick ()
-    {   alert("this.props.name")
+    handleClick = event =>
+    {   event.preventDefault();
+        alert(`Name: ${ this.props.name }`)
     }
 
     render ()
