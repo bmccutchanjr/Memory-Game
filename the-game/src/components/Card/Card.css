@@ -1,0 +1,19 @@
+*
+{   box-sizing: border-box;
+}
+
+.card
+{
+    border: 2px solid blue;
+    border-radius: 5px;
+    height: auto;
+    overflow: none;
+    padding: 5px;
+    margin: 10px;
+    width: 120px;
+}
+
+.card img
+{   height: auto;
+    width: 100%;
+}

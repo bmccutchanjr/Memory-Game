@@ -1,12 +1,22 @@
-import React from "react";
+import React, { Component } from "react";
 import "./Card.css";
 
-const Card = props =>
-(
-    <div className="card">
-        <img src={ props.image } alt={ props.name }/>
-        <div className="name-div">{ props.name }</div>
-    </div>
-)
+class Card extends Component
+{   constructor (props)
+    {   super (props);
+        this.state =
+        {   isSeleted: false
+        }
+    }
+
+    render ()
+    {   return (
+            <div className="card">
+                <img src={ this.props.image} alt={ this.props.name}/>
+                <div className="name-div">{ this.props.name }</div>
+            </div>
+        )
+    }
+}
 
 export default Card;
