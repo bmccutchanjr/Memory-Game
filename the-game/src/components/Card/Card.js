@@ -9,9 +9,13 @@ class Card extends Component
         }
     }
 
+    handleClick ()
+    {   alert("this.props.name")
+    }
+
     render ()
     {   return (
-            <div className="card">
+            <div className="card" onClick={ this.handleClick }>
                 <img src={ this.props.image} alt={ this.props.name}/>
                 <div className="name-div">{ this.props.name }</div>
             </div>
