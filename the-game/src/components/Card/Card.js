@@ -2,10 +2,9 @@ import React, { Component } from "react";
 import "./Card.css";
 
 class Card extends Component
-{
-        state =
-        {   isSeleted: false
-        }
+{   state =
+    {   isSeleted: false
+    }
     
 
     handleClick = event =>
