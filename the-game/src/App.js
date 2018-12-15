@@ -76,17 +76,16 @@ class App extends Component
         for (let i=0; i<aLen; i++)
         {   if (this.state.animals[i].id === id) index = i;
         }
-// alert("id: " + id + " index: " + index);
-alert("isSelected: " + this.state.animals[index].isSelected);
+
         if (this.state.animals[index].isSelected)
         {   // This animal was selected previously...that's game over!
             this.resetGame()
         }
         else
         {
-            this.setState({ [animals[index].isSelected]: true });
-alert("s/b true: " + this.state.animals[index].isSelected);
-            // this.state.animals[index].isSelected = true;
+            // this.setState({ animals[index].isSelected: true });
+            this.state.animals[index].isSelected = true;
+            // this.setState({ [animals[index].isSelected]: true });
             this.setState({ theScore: this.state.theScore + 1 });
 
             this.theCount += 1;
@@ -104,11 +103,19 @@ alert("You won!")
     }
 
     resetGame = () =>
-    {   
-alert("resetting")
+    {   // Reset game properties and reshuffle the cards for the next round...
+
         this.setState({ theScore: 0 });
         this.randomize();
         this.theCount = 0;
+
+        const aLen = this.state.animals.length;
+
+        for (let i=0; i<aLen; i++)
+        {   // Don't forget to reset isSelected!
+        
+            this.state.animals[i].isSelected = false;
+        }
     }
 
     render ()
