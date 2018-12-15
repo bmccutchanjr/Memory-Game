@@ -1,50 +1,62 @@
 [
-    {   "id":   1,
+    {   "id":   0,
         "name": "Barley",
-        "img":  "https://g.petango.com/photos/1830/04dd00ae-215c-446e-98ee-b85a866b79a5.jpg"
+        "img":  "https://g.petango.com/photos/1830/04dd00ae-215c-446e-98ee-b85a866b79a5.jpg",
+        "isSelected": false
+    },
+    {   "id":   1,
+        "name": "Binx",
+        "img":  "https://g.petango.com/photos/1830/bedd2133-e1ed-4a0e-8850-07fb9cfb333f.jpg",
+        "isSelected": false
     },
     {   "id":   2,
-        "name": "Binx",
-        "img":  "https://g.petango.com/photos/1830/bedd2133-e1ed-4a0e-8850-07fb9cfb333f.jpg"
+        "name": "Blue",
+        "img":  "https://g.petango.com/photos/1830/777235ce-5c94-4498-9ea1-8b4038018dd6.jpg",
+        "isSelected": false
     },
     {   "id":   3,
-        "name": "Blue",
-        "img":  "https://g.petango.com/photos/1830/777235ce-5c94-4498-9ea1-8b4038018dd6.jpg"
+        "name": "Dieter",
+        "img":  "https://g.petango.com/photos/1830/dd85e50f-4aae-46bb-8c4e-d50a91a123ba.jpg",
+        "isSelected": false
     },
     {   "id":   4,
-        "name": "Dieter",
-        "img":  "https://g.petango.com/photos/1830/dd85e50f-4aae-46bb-8c4e-d50a91a123ba.jpg"
+        "name": "Enzo",
+        "img":  "https://g.petango.com/photos/1830/ec01cd2f-8d59-4b2c-85b5-c9404af69137.jpg",
+        "isSelected": false
     },
     {   "id":   5,
-        "name": "Enzo",
-        "img":  "https://g.petango.com/photos/1830/ec01cd2f-8d59-4b2c-85b5-c9404af69137.jpg"
+        "name": "Geronimo",
+        "img":  "https://g.petango.com/photos/1830/ea26b2d9-2d99-4bc9-880d-522be6efba87.jpg",
+        "isSelected": false
     },
     {   "id":   6,
-        "name": "Geronimo",
-        "img":  "https://g.petango.com/photos/1830/ea26b2d9-2d99-4bc9-880d-522be6efba87.jpg"
+        "name": "Luna",
+        "img":  "https://g.petango.com/photos/1830/bd4436d0-12ae-4b34-8414-33b6b8c41b37.jpg",
+        "isSelected": false
     },
     {   "id":   7,
-        "name": "Luna",
-        "img":  "https://g.petango.com/photos/1830/bd4436d0-12ae-4b34-8414-33b6b8c41b37.jpg"
+        "name": "Mr. T",
+        "img":  "https://g.petango.com/photos/1830/25a521ce-ec39-4a00-8c79-5346f07a05f7.jpg",
+        "isSelected": false
     },
     {   "id":   8,
-        "name": "Mr. T",
-        "img":  "https://g.petango.com/photos/1830/25a521ce-ec39-4a00-8c79-5346f07a05f7.jpg"
+        "name": "Peep",
+        "img":  "https://g.petango.com/photos/1830/70edd076-c541-46fd-b267-fb4610316afa.jpg",
+        "isSelected": false
     },
     {   "id":   9,
-        "name": "Peep",
-        "img":  "https://g.petango.com/photos/1830/70edd076-c541-46fd-b267-fb4610316afa.jpg"
+        "name": "Pierre",
+        "img":  "https://g.petango.com/photos/1830/6e0163a6-12a9-4469-84de-bab21c768b9a.jpg",
+        "isSelected": false
     },
     {   "id":   10,
-        "name": "Pierre",
-        "img":  "https://g.petango.com/photos/1830/6e0163a6-12a9-4469-84de-bab21c768b9a.jpg"
-    },
-    {   "id":   12,
         "name": "Pumpkin",
-        "img":  "https://g.petango.com/photos/1830/f0c1bff1-cbc9-4fe4-ad76-2114da8b3f17.jpg"
+        "img":  "https://g.petango.com/photos/1830/f0c1bff1-cbc9-4fe4-ad76-2114da8b3f17.jpg",
+        "isSelected": false
     },
-    {   "id":   12,
+    {   "id":   11,
         "name": "Rueben",
-        "img":  "https://g.petango.com/photos/1830/e1203c21-3c60-41a7-a658-bcbb5eb9dae7.jpg"
+        "img":  "https://g.petango.com/photos/1830/e1203c21-3c60-41a7-a658-bcbb5eb9dae7.jpg",
+        "isSelected": false
     }
 ]

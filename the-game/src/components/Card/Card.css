@@ -6,6 +6,9 @@
 {
     border: 2px solid blue;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
     height: auto;
     overflow: none;
     padding: 5px;
@@ -14,6 +17,13 @@
 }
 
 .card img
-{   height: auto;
+{   display: block;
+    flex-grow: 1;
+    height: auto;
     width: 100%;
+}
+
+.name-div
+{   flex-grow: 0;
+    text-align: center;
 }
