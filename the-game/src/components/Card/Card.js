@@ -13,7 +13,7 @@ class Card extends Component
         // handleClick() originally did more than this, but when I realized that I couldn't use the
         // state property to keep track of selected cards (the state property belongs to the component,
         // which does not get shuffled when App.js shuffles animals[]).  But even though this function now
-        // doews very little, it still apperas to be necessary.  I don't seem to be able to pass a parameter
+        // does very little, it still appears to be necessary.  I don't seem to be able to pass a parameter
         // to incrementScore() in JSX.
 
         this.props.incrementScore(this.props.id)

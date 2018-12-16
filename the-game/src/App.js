@@ -12,9 +12,19 @@ class App extends Component
     };
 
     theCount = 0;
+    loser = new Audio ("./audio/loser.mp3");
+    tada = new Audio ("./audio/ta-da.mp3");
+    ting = new Audio ("./audio/ting.mp3");
+
+    playAudio (audio)
+    {   // To be sure the audio is played each time, it must be loaded each time before it is played
+    
+        audio.load();
+        audio.play();
+    }
 
     randomize = () =>
-    {   // Randomly arrange the animals to make the game more than trivial
+    {   // Randomly arrange the animals to make the game a little more than trivial
 
         // First I need a copy of animals[] because React won't let me directly mutate properties
         // of state
@@ -52,7 +62,6 @@ class App extends Component
         this.setState ({ animals: newArray })
     }
 
-    // incrementScore = () =>
     incrementScore = (id) =>
     {
         // This function is used by <Card> to increment the score when a tile card has been guessed
@@ -79,24 +88,44 @@ class App extends Component
 
         if (this.state.animals[index].isSelected)
         {   // This animal was selected previously...that's game over!
+            this.playAudio(this.loser)
             this.resetGame()
         }
         else
-        {
-            // this.setState({ animals[index].isSelected: true });
+        {   // This animal has not been selected -- at least not during this round of play.  Set
+            // animal[].isSelected = true for the animal indicated by the variable index.  Increment
+            // theScore and use setState() to push theScore to <Title> and render the component.
+
+            // I don't seem to be able to reference the isSelected property of the element in
+            // animals[] in a call to setState().  Everything I tried is either a syntax error or
+            // else had no effect.  But I only need to use setState() to signal React to render
+            // components.  So, because animals[index].isSelected is not rendered on the page anywhere,
+            // I can get away with directly mutating it's value.
+            //
+            // May not be kosher -- but it works
+
+            // eslint-disable-next-line
             this.state.animals[index].isSelected = true;
-            // this.setState({ [animals[index].isSelected]: true });
+
             this.setState({ theScore: this.state.theScore + 1 });
 
             this.theCount += 1;
             
+            // if (this.state.theScore === 12)
             if (this.theCount === 12)
             {   // There are 12 cards.  The game is won if all the cards are selected.
-alert("You won!")
+
+                // Although this.state.theScore increments correctly (the value rendered to the screen
+                // increments as cards are selected) I don't appear to be able to reference it in this
+                // if-block?  So I'm using an additional counter, theCount, to determine if the game
+                // has been won.
+
+                this.playAudio(this.tada);
                 this.resetGame();
             }
             else
             {   // If the game isn't over, reanrrange the cards for the next guess
+                this.playAudio(this.ting);
                 this.randomize()
             }
         }
@@ -113,7 +142,8 @@ alert("You won!")
 
         for (let i=0; i<aLen; i++)
         {   // Don't forget to reset isSelected!
-        
+
+            // eslint-disable-next-line
             this.state.animals[i].isSelected = false;
         }
     }
